@@ -1,0 +1,17 @@
+<h1> New Shoutout </h1>
+
+<p>
+  <%= simple_form_for @shoutout, :html => {:class => 'form-vertical' } do |f| %>
+  <%= f.input :recipiant, placeholder: 'Name of recipiant', label: false %>
+  <%= f.input :message, placeholder: 'Message', label: false %>
+
+  <%= simple_form_for @participant, :html => {:class => 'form-vertical' } do |p| %>
+  <%= p.input :participant, placeholder: 'Add more friends', label: false %>
+  <% end %>
+  
+  <%= f.button :submit %>
+<% end %>
+
+ 
+
+</p>

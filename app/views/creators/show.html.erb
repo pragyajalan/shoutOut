@@ -1,0 +1,20 @@
+<h1>your shoutouts</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><b>Pic</b></th>
+      <th><b>Recipient</b></th>
+      <th><b>Participants</b></th>
+    </tr>
+  </thead>
+<% @shoutouts.each do |s| %>
+  <tr>
+    <td><%= s.recipiant %></td>
+    <% s.participants.each do |p|%>
+    <td><%= p.email %></td>
+    <%end%>
+    <td><%= s.message%></td>
+  </tr>
+<% end %>
+</table>
